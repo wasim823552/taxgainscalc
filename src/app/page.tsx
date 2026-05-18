@@ -97,10 +97,10 @@ export default function Home() {
                   <p className="text-xs text-gray-500">Capital Gains Tax Calculator</p>
                 </div>
               </div>
-              <nav className="hidden md:flex items-center gap-6">
+              <nav className="hidden md:flex items-center gap-4">
                 <a href="#calculator" className="text-sm text-gray-600 hover:text-emerald-600 transition">Calculator</a>
-                <a href="#rates" className="text-sm text-gray-600 hover:text-emerald-600 transition">Tax Rates</a>
-                <a href="#guide" className="text-sm text-gray-600 hover:text-emerald-600 transition">Guide</a>
+                <Link href="/capital-gains-tax-rates" className="text-sm text-gray-600 hover:text-emerald-600 transition">Tax Rates</Link>
+                <Link href="/how-to-calculate-capital-gains-tax" className="text-sm text-gray-600 hover:text-emerald-600 transition">Guide</Link>
                 <a href="#faq" className="text-sm text-gray-600 hover:text-emerald-600 transition">FAQ</a>
               </nav>
             </div>
@@ -667,6 +667,92 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Explore More Calculators & Guides */}
+        <section className="py-12 px-4 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 text-center">
+              Capital Gains Tax Calculators & Guides
+            </h2>
+            <p className="text-gray-600 mb-8 text-center max-w-2xl mx-auto">
+              Explore our comprehensive collection of free capital gains tax calculators and guides for every asset type and situation.
+            </p>
+            <div className="grid md:grid-cols-3 gap-4">
+              <Link href="/capital-gains-tax-rates" className="group">
+                <Card className="h-full border-emerald-100 hover:border-emerald-300 hover:shadow-lg transition-all">
+                  <CardContent className="pt-6">
+                    <h3 className="font-semibold text-emerald-800 mb-1 group-hover:text-emerald-600">Capital Gains Tax Rates 2025-2026</h3>
+                    <p className="text-sm text-gray-500">Complete federal tax rate brackets for all filing statuses</p>
+                  </CardContent>
+                </Card>
+              </Link>
+              <Link href="/long-term-capital-gains-tax-calculator" className="group">
+                <Card className="h-full border-emerald-100 hover:border-emerald-300 hover:shadow-lg transition-all">
+                  <CardContent className="pt-6">
+                    <h3 className="font-semibold text-emerald-800 mb-1 group-hover:text-emerald-600">Long-Term Capital Gains Calculator</h3>
+                    <p className="text-sm text-gray-500">Calculate 0%, 15%, 20% long-term capital gains tax</p>
+                  </CardContent>
+                </Card>
+              </Link>
+              <Link href="/short-term-capital-gains-tax-calculator" className="group">
+                <Card className="h-full border-emerald-100 hover:border-emerald-300 hover:shadow-lg transition-all">
+                  <CardContent className="pt-6">
+                    <h3 className="font-semibold text-emerald-800 mb-1 group-hover:text-emerald-600">Short-Term Capital Gains Calculator</h3>
+                    <p className="text-sm text-gray-500">Calculate short-term gains at ordinary income rates</p>
+                  </CardContent>
+                </Card>
+              </Link>
+              <Link href="/real-estate-capital-gains-tax-calculator" className="group">
+                <Card className="h-full border-emerald-100 hover:border-emerald-300 hover:shadow-lg transition-all">
+                  <CardContent className="pt-6">
+                    <h3 className="font-semibold text-emerald-800 mb-1 group-hover:text-emerald-600">Real Estate Capital Gains Calculator</h3>
+                    <p className="text-sm text-gray-500">Tax on property, 1031 exchanges, Section 121 exclusion</p>
+                  </CardContent>
+                </Card>
+              </Link>
+              <Link href="/stock-capital-gains-tax-calculator" className="group">
+                <Card className="h-full border-emerald-100 hover:border-emerald-300 hover:shadow-lg transition-all">
+                  <CardContent className="pt-6">
+                    <h3 className="font-semibold text-emerald-800 mb-1 group-hover:text-emerald-600">Stock Capital Gains Tax Calculator</h3>
+                    <p className="text-sm text-gray-500">Calculate taxes on stock sales, mutual funds, and ETFs</p>
+                  </CardContent>
+                </Card>
+              </Link>
+              <Link href="/capital-gains-tax-by-state" className="group">
+                <Card className="h-full border-emerald-100 hover:border-emerald-300 hover:shadow-lg transition-all">
+                  <CardContent className="pt-6">
+                    <h3 className="font-semibold text-emerald-800 mb-1 group-hover:text-emerald-600">Capital Gains Tax by State</h3>
+                    <p className="text-sm text-gray-500">State-by-state capital gains tax rates for all 50 states</p>
+                  </CardContent>
+                </Card>
+              </Link>
+              <Link href="/home-sale-capital-gains-tax-calculator" className="group">
+                <Card className="h-full border-emerald-100 hover:border-emerald-300 hover:shadow-lg transition-all">
+                  <CardContent className="pt-6">
+                    <h3 className="font-semibold text-emerald-800 mb-1 group-hover:text-emerald-600">Home Sale Capital Gains Tax</h3>
+                    <p className="text-sm text-gray-500">Section 121 exclusion, primary residence tax rules</p>
+                  </CardContent>
+                </Card>
+              </Link>
+              <Link href="/day-trading-tax-calculator" className="group">
+                <Card className="h-full border-emerald-100 hover:border-emerald-300 hover:shadow-lg transition-all">
+                  <CardContent className="pt-6">
+                    <h3 className="font-semibold text-emerald-800 mb-1 group-hover:text-emerald-600">Day Trading Tax Calculator</h3>
+                    <p className="text-sm text-gray-500">Tax rules for active traders, mark-to-market, TTS</p>
+                  </CardContent>
+                </Card>
+              </Link>
+              <Link href="/how-to-calculate-capital-gains-tax" className="group">
+                <Card className="h-full border-emerald-100 hover:border-emerald-300 hover:shadow-lg transition-all">
+                  <CardContent className="pt-6">
+                    <h3 className="font-semibold text-emerald-800 mb-1 group-hover:text-emerald-600">How to Calculate Capital Gains Tax</h3>
+                    <p className="text-sm text-gray-500">Step-by-step guide with worked examples and IRS forms</p>
+                  </CardContent>
+                </Card>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Footer */}
         <footer className="bg-gray-900 text-gray-300 py-12 px-4">
           <div className="max-w-6xl mx-auto">
@@ -686,12 +772,23 @@ export default function Home() {
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-white mb-4">Quick Links</h4>
+                <h4 className="font-semibold text-white mb-4">Calculators</h4>
                 <ul className="space-y-2 text-sm">
                   <li><a href="#calculator" className="hover:text-emerald-400 transition">Tax Calculator</a></li>
-                  <li><a href="#rates" className="hover:text-emerald-400 transition">Tax Rates 2025</a></li>
-                  <li><a href="#guide" className="hover:text-emerald-400 transition">How to Calculate</a></li>
-                  <li><a href="#faq" className="hover:text-emerald-400 transition">FAQ</a></li>
+                  <li><Link href="/long-term-capital-gains-tax-calculator" className="hover:text-emerald-400 transition">Long-Term Calculator</a></li>
+                  <li><Link href="/short-term-capital-gains-tax-calculator" className="hover:text-emerald-400 transition">Short-Term Calculator</a></li>
+                  <li><Link href="/real-estate-capital-gains-tax-calculator" className="hover:text-emerald-400 transition">Real Estate Calculator</a></li>
+                  <li><Link href="/stock-capital-gains-tax-calculator" className="hover:text-emerald-400 transition">Stock Calculator</a></li>
+                  <li><Link href="/day-trading-tax-calculator" className="hover:text-emerald-400 transition">Day Trading Calculator</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold text-white mb-4">Guides</h4>
+                <ul className="space-y-2 text-sm">
+                  <li><Link href="/capital-gains-tax-rates" className="hover:text-emerald-400 transition">Tax Rates 2025-2026</a></li>
+                  <li><Link href="/how-to-calculate-capital-gains-tax" className="hover:text-emerald-400 transition">How to Calculate</a></li>
+                  <li><Link href="/capital-gains-tax-by-state" className="hover:text-emerald-400 transition">Tax by State</a></li>
+                  <li><Link href="/home-sale-capital-gains-tax-calculator" className="hover:text-emerald-400 transition">Home Sale Tax</a></li>
                 </ul>
               </div>
               <div>
