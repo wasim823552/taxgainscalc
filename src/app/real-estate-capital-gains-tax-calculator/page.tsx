@@ -95,6 +95,57 @@ const faqs = [
 export default function RealEstateCapitalGainsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                "name": "How is capital gains tax calculated on the sale of real estate?",
+                "acceptedAnswer": { "@type": "Answer", text: "Real estate capital gains tax is calculated by subtracting your adjusted cost basis (purchase price plus closing costs and improvements) from your net sale proceeds (sale price minus commissions and selling costs). The resulting gain is taxed based on your holding period and income level." }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the Section 121 primary residence exclusion?",
+                "acceptedAnswer": { "@type": "Answer", text: "The Section 121 exclusion allows you to exclude up to $250,000 of gain ($500,000 for married couples) from the sale of your primary home. You must have owned and used it as your primary residence for at least two of the five years before the sale. The exclusion can be used once every two years." }
+              },
+              {
+                "@type": "Question",
+                "name": "What is a 1031 exchange and how does it defer capital gains tax?",
+                "acceptedAnswer": { "@type": "Answer", text: "A 1031 exchange allows you to defer capital gains tax by reinvesting proceeds from an investment property sale into a like-kind replacement property. You must identify the replacement within 45 days and close within 180 days. A qualified intermediary must hold the proceeds between transactions." }
+              },
+              {
+                "@type": "Question",
+                "name": "What is depreciation recapture on rental property?",
+                "acceptedAnswer": { "@type": "Answer", text: "Depreciation recapture requires you to pay tax on depreciation deductions previously claimed when you sell a rental property. The recaptured amount is taxed at a maximum rate of 25%, regardless of your regular capital gains rate. Any remaining gain is taxed at the standard 0%, 15%, or 20% rates." }
+              },
+              {
+                "@type": "Question",
+                "name": "Does flipping houses create different tax consequences?",
+                "acceptedAnswer": { "@type": "Answer", text: "Yes. Properties held one year or less are subject to short-term rates up to 37%. If the IRS classifies your flipping as a business, profits may be taxed as ordinary income plus self-employment tax. Frequent flippers may be classified as dealers, disqualifying them from 1031 exchanges and other investor tax benefits." }
+              }
+            ]
+          })
+        }}
+      />
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://taxgainscalc.com" },
+              { "@type": "ListItem", position: 2, name: "Real Estate Capital Gains Tax Calculator", item: "https://taxgainscalc.com/real-estate-capital-gains-tax-calculator" }
+            ]
+          })
+        }}
+      />
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 py-4">

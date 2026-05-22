@@ -35,6 +35,72 @@ export const metadata: Metadata = {
 export default function CapitalGainsTaxRatesPage() {
   return (
     <SiteLayout>
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What are the long-term capital gains tax rates for 2025?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "For 2025, long-term capital gains are taxed at three preferential rates: 0%, 15%, and 20%. The rate depends on your taxable income and filing status. Single filers pay 0% on gains up to $48,350 and 20% on income above $533,400. Married couples filing jointly have thresholds of $96,700 and $600,050 respectively."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How are short-term capital gains taxed differently from long-term gains?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Short-term capital gains (assets held one year or less) are taxed at ordinary income rates ranging from 10% to 37%, with no preferential treatment. Long-term capital gains (held more than one year) benefit from preferential rates of 0%, 15%, or 20%. The difference can be substantial—a $50,000 short-term gain at 22% costs $11,000, while the same gain long-term at 15% costs only $7,500."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the Net Investment Income Tax (NIIT)?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The NIIT is an additional 3.8% surtax on net investment income when your MAGI exceeds $200,000 (single), $250,000 (married filing jointly), or $125,000 (married filing separately). It applies to the lesser of your net investment income or the excess over the threshold. The combined maximum federal rate on long-term gains is 23.8% when NIIT applies."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do state taxes apply to capital gains?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, most states tax capital gains as ordinary income. Nine states have no income tax and therefore no state capital gains tax: Alaska, Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, and Wyoming. High-tax states like California (up to 13.3%) and New York (up to 10.9% plus city taxes) can add substantially to your total bill."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are there special capital gains tax rates for collectibles or real estate?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Collectibles such as art, coins, and precious metals are taxed at a maximum rate of 28%. Depreciation recapture on real estate is taxed at up to 25%. The primary residence exclusion (Section 121) allows excluding up to $250,000 ($500,000 for married couples) of gain on the sale of your home if you meet the ownership and use tests."
+                }
+              }
+            ]
+          })
+        }}
+      />
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://taxgainscalc.com" },
+              { "@type": "ListItem", position: 2, name: "Capital Gains Tax Rates", item: "https://taxgainscalc.com/capital-gains-tax-rates" }
+            ]
+          })
+        }}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 text-center">

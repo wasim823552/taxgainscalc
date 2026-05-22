@@ -94,6 +94,57 @@ const faqs = [
 export default function StockCapitalGainsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                "name": "How much tax do I pay on stock gains?",
+                "acceptedAnswer": { "@type": "Answer", text: "Short-term stock gains (held one year or less) are taxed at ordinary income rates of 10% to 37%. Long-term gains (held more than one year) are taxed at preferential rates of 0%, 15%, or 20% based on your taxable income. High earners may also owe the additional 3.8% Net Investment Income Tax." }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the difference between FIFO and specific identification for stock sales?",
+                "acceptedAnswer": { "@type": "Answer", text: "FIFO (First In, First Out) sells your oldest shares first, generally producing the largest long-term gains. Specific identification lets you choose which shares to sell, giving you control over your tax outcome by selling high-basis shares to minimize gains." }
+              },
+              {
+                "@type": "Question",
+                "name": "How does a stock split affect my cost basis?",
+                "acceptedAnswer": { "@type": "Answer", text: "A stock split does not change your total cost basis. It divides existing shares into more shares at a lower per-share price. For example, in a 2-for-1 split of 100 shares bought at $50 each, you'd own 200 shares at $25 each, but your total basis remains $5,000." }
+              },
+              {
+                "@type": "Question",
+                "name": "How are employee stock options (ISOs and NSOs) taxed?",
+                "acceptedAnswer": { "@type": "Answer", text: "NSOs are taxed as ordinary income on the spread at exercise. ISOs have no regular income tax at exercise but the spread may trigger AMT. Both types generate capital gains on subsequent sale. Holding ISO shares for 2 years from grant and 1 year from exercise qualifies the entire gain for long-term rates." }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the wash sale rule and how does it affect stock taxes?",
+                "acceptedAnswer": { "@type": "Answer", text: "The wash sale rule disallows a tax loss if you purchase a substantially identical security within 30 days before or after selling at a loss. The disallowed loss is added to the replacement shares' cost basis, deferring the deduction. Wait at least 31 days before repurchasing to avoid this rule." }
+              }
+            ]
+          })
+        }}
+      />
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://taxgainscalc.com" },
+              { "@type": "ListItem", position: 2, name: "Stock Capital Gains Tax Calculator", item: "https://taxgainscalc.com/stock-capital-gains-tax-calculator" }
+            ]
+          })
+        }}
+      />
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 py-4">

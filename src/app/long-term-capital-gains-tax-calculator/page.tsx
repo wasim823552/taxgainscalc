@@ -76,6 +76,57 @@ export default function LongTermCapitalGainsCalculatorPage() {
 
   return (
     <SiteLayout>
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                "name": "What qualifies as a long-term capital gain?",
+                "acceptedAnswer": { "@type": "Answer", text: "A long-term capital gain occurs when you sell a capital asset held for more than one year. The IRS measures the holding period starting the day after acquisition. For example, purchasing a stock on January 15, 2024 and selling on January 16, 2025 qualifies as long-term." }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the long-term capital gains tax rate for 2025?",
+                "acceptedAnswer": { "@type": "Answer", text: "Long-term capital gains are taxed at preferential rates of 0%, 15%, or 20% based on your taxable income and filing status. For 2025, single filers pay 0% up to $48,350, 15% up to $533,400, and 20% above that. An additional 3.8% NIIT applies for high earners." }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I pay 0% long-term capital gains tax?",
+                "acceptedAnswer": { "@type": "Answer", text: "Yes. If your total taxable income falls below the 0% bracket threshold, you owe no federal capital gains tax on long-term gains. For 2025, single filers can have up to $48,350 and married couples up to $96,700 in taxable income and qualify for the 0% rate." }
+              },
+              {
+                "@type": "Question",
+                "name": "How do long-term capital gains affect my tax bracket?",
+                "acceptedAnswer": { "@type": "Answer", text: "Long-term gains are stacked on top of your ordinary income to determine which rate applies. For example, a single filer with $40,000 in wages and $20,000 in long-term gains has $60,000 total income. The first $48,350 falls in the 0% bracket and the remaining $11,650 is taxed at 15%." }
+              },
+              {
+                "@type": "Question",
+                "name": "Are there strategies to reduce long-term capital gains tax?",
+                "acceptedAnswer": { "@type": "Answer", text: "Yes. Tax-loss harvesting offsets gains with losses. Charitable donations of appreciated assets avoid the gain entirely. Tax-advantaged accounts like IRAs shelter gains. Real estate investors can use 1031 exchanges to defer gains. Timing gain realization in low-income years helps stay within the 0% bracket." }
+              }
+            ]
+          })
+        }}
+      />
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://taxgainscalc.com" },
+              { "@type": "ListItem", position: 2, name: "Long-Term Capital Gains Tax Calculator", item: "https://taxgainscalc.com/long-term-capital-gains-tax-calculator" }
+            ]
+          })
+        }}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 text-center">

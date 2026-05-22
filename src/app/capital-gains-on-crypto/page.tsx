@@ -251,35 +251,142 @@ export default function CryptoCapitalGainsPage() {
         </div>
       </section>
 
-      {/* DeFi and Staking */}
+      {/* Mining, Airdrops, and Hard Forks */}
       <section className="py-8 px-4 bg-slate-50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">
+            Mining, Airdrops, and Hard Fork Tax Treatment
+          </h2>
+          <div className="prose prose-lg max-w-none text-gray-700 mb-8">
+            <p className="mb-4">
+              Beyond buying and selling cryptocurrency on exchanges, there are several other ways to acquire digital assets, each with its own distinct tax treatment. Understanding the tax implications of mining, airdrops, and hard forks is essential for comprehensive crypto tax compliance. The IRS has issued specific guidance on many of these acquisition methods, and the rules continue to evolve as the cryptocurrency landscape develops.
+            </p>
+          </div>
+          <div className="grid gap-4">
+            <Card>
+              <CardContent className="pt-6">
+                <h3 className="font-semibold text-lg text-emerald-800 mb-3">Cryptocurrency Mining Income</h3>
+                <p className="text-gray-700 text-sm mb-3">
+                  Cryptocurrency received from mining activities is taxable as ordinary income at its fair market value on the date you successfully mine and take control of the coins. According to IRS Revenue Ruling 2014-21, a miner must include in gross income the fair market value of the virtual currency at the time of receipt. For example, if you mine Bitcoin worth $50,000 during the year, you must report $50,000 as ordinary income regardless of whether you later sell the Bitcoin. Your cost basis in the mined cryptocurrency becomes its fair market value at the time of mining.
+                </p>
+                <p className="text-gray-700 text-sm mb-3">
+                  Mining expenses may be deductible if you operate as a business rather than a hobby. deductible expenses can include electricity costs, mining equipment depreciation, internet fees, and mining pool fees. If the IRS classifies your mining activity as a hobby, expenses are not deductible but the income is still taxable. Hobby vs. business determination depends on factors such as whether you mine with a profit motive, the time and effort you devote to mining, and whether you depend on mining income for your livelihood.
+                </p>
+                <p className="text-gray-700 text-sm">
+                  When you eventually sell mined cryptocurrency, you will owe capital gains tax on any appreciation since the mining date. If the Bitcoin you mined for $50,000 (its value at the time of mining) later appreciates to $80,000 before you sell it, you would owe long-term or short-term capital gains tax on the $30,000 difference, depending on how long you held it after mining.
+                </p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="pt-6">
+                <h3 className="font-semibold text-lg text-emerald-800 mb-3">Airdrops and Forks</h3>
+                <p className="text-gray-700 text-sm mb-3">
+                  Airdrops and hard forks represent two additional ways cryptocurrency holders can acquire new tokens, and both have specific tax implications. An airdrop occurs when a cryptocurrency project distributes free tokens to existing holders of a particular blockchain. A hard fork happens when a blockchain splits into two separate chains, resulting in holders receiving new coins on the new chain.
+                </p>
+                <p className="text-gray-700 text-sm mb-3">
+                  According to IRS Revenue Ruling 2019-24, cryptocurrency received through an airdrop or hard fork is taxable as ordinary income at its fair market value on the date you exercise dominion and control over the new coins. For a hard fork, dominion and control typically means the ability to sell, transfer, or exchange the new cryptocurrency. If you received Bitcoin Cash (BCH) from the Bitcoin hard fork, you would report as income the fair market value of BCH on the date you first had the ability to transact with it.
+                </p>
+                <p className="text-gray-700 text-sm">
+                  Your cost basis in the airdropped or forked cryptocurrency becomes the fair market value at the time of receipt. When you later sell these tokens, any appreciation or depreciation since receipt will result in a capital gain or loss. It is important to note that if you never gained dominion and control over forked coins, for example by never accessing the new chain, you have not received a taxable event, though this is an evolving area of tax law.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* DeFi, Staking, and NFT Tax */}
+      <section className="py-8 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">
             DeFi, Staking, and NFT Tax Implications
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <Card className="border-emerald-200">
-              <CardHeader>
-                <CardTitle className="text-lg text-emerald-800">Staking Rewards</CardTitle>
-              </CardHeader>
-              <CardContent className="text-gray-700 text-sm">
-                <p className="mb-2">Staking rewards are taxable as ordinary income at their fair market value on the date you receive them. When you later sell staked tokens, you may also owe capital gains tax on any appreciation since you received the staking reward. Many stakers are caught off guard by this double-taxation aspect.</p>
+          <div className="prose prose-lg max-w-none text-gray-700 mb-8">
+            <p className="mb-4">
+              The rise of decentralized finance (DeFi), proof-of-stake networks, and non-fungible tokens (NFTs) has created entirely new categories of cryptocurrency activity that present unique tax challenges. These activities often generate multiple taxable events from a single transaction, making accurate tax reporting significantly more complex than simple buy-and-sell trading. Understanding the tax treatment of each activity is crucial for maintaining compliance and optimizing your tax position.
+            </p>
+          </div>
+          <div className="grid gap-4">
+            <Card>
+              <CardContent className="pt-6">
+                <h3 className="font-semibold text-lg text-emerald-800 mb-3">Staking Rewards</h3>
+                <p className="text-gray-700 text-sm mb-3">
+                  Staking rewards are taxable as ordinary income at their fair market value on the date you receive them. This was confirmed by the IRS in Rev. Rul. 2023-14, which specifically addressed proof-of-stake validation rewards. When you later sell staked tokens, you may also owe capital gains tax on any appreciation since you received the staking reward. Many stakers are caught off guard by this double-taxation aspect: first ordinary income tax when receiving the rewards, then capital gains tax when selling the appreciated tokens.
+                </p>
+                <p className="text-gray-700 text-sm">
+                  For practical purposes, stakers should track every reward receipt, record its fair market value in USD at the time of receipt, and maintain a running cost basis for their staked holdings. This becomes especially complex with auto-compounding staking protocols where rewards are automatically restaked, generating a new taxable event each time. Using dedicated crypto tax tracking software is highly recommended for anyone actively staking.
+                </p>
               </CardContent>
             </Card>
-            <Card className="border-emerald-200">
-              <CardHeader>
-                <CardTitle className="text-lg text-emerald-800">DeFi Yield Farming</CardTitle>
-              </CardHeader>
-              <CardContent className="text-gray-700 text-sm">
-                <p className="mb-2">Yield farming creates multiple taxable events. Depositing tokens into a liquidity pool may be treated as an exchange if you receive LP tokens. Yield rewards earned are taxable as ordinary income when received. Withdrawing liquidity and receiving back different tokens triggers another capital gains calculation.</p>
+            <Card>
+              <CardContent className="pt-6">
+                <h3 className="font-semibold text-lg text-emerald-800 mb-3">DeFi Yield Farming and Liquidity Pools</h3>
+                <p className="text-gray-700 text-sm mb-3">
+                  DeFi activities create some of the most complex tax situations in the cryptocurrency space. Depositing tokens into a liquidity pool and receiving LP tokens in return may be treated as a taxable exchange if the LP tokens are considered a different asset. Yield farming rewards earned are taxable as ordinary income when received. When you withdraw from a liquidity pool and receive back different tokens or a different ratio of tokens than you deposited, the transaction may trigger capital gains tax on the difference.
+                </p>
+                <p className="text-gray-700 text-sm">
+                  Impermanent loss in DeFi liquidity pools also has tax implications. If you withdraw less value than you deposited, you may be able to claim a capital loss. However, the specific treatment of impermanent loss remains an area of tax uncertainty, and the IRS has not issued definitive guidance on this topic. Cross-chain bridging, another common DeFi activity, is generally treated as a taxable event similar to a crypto-to-crypto trade.
+                </p>
               </CardContent>
             </Card>
-            <Card className="border-emerald-200">
-              <CardHeader>
-                <CardTitle className="text-lg text-emerald-800">NFTs</CardTitle>
-              </CardHeader>
-              <CardContent className="text-gray-700 text-sm">
-                <p className="mb-2">Buying and selling NFTs triggers capital gains tax on any profit. If you create and sell NFTs, the proceeds are generally treated as ordinary business income. Minting an NFT is not a taxable event, but gas fees paid during minting can be added to your cost basis.</p>
+            <Card>
+              <CardContent className="pt-6">
+                <h3 className="font-semibold text-lg text-emerald-800 mb-3">NFTs (Non-Fungible Tokens)</h3>
+                <p className="text-gray-700 text-sm mb-3">
+                  Non-fungible tokens (NFTs) have their own set of tax rules. Buying an NFT is not a taxable event, but selling an NFT for a profit triggers capital gains tax on the difference between your sale proceeds and your cost basis (typically the purchase price plus any gas fees). If you create and sell NFTs, the proceeds are generally treated as ordinary business income subject to self-employment tax, not capital gains tax.
+                </p>
+                <p className="text-gray-700 text-sm">
+                  A particularly important consideration for NFT investors is the collectibles tax rate. Long-term gains on collectibles, which may include certain NFTs classified as digital art or collectibles under IRS rules, are subject to a maximum tax rate of 28% rather than the standard 20% long-term capital gains rate. The IRS has not yet provided comprehensive guidance on exactly which types of NFTs qualify as collectibles, so this remains an evolving area. Gas fees paid for minting, buying, and selling NFTs should be tracked as they can either increase your cost basis or be considered part of the transaction costs.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* IRS Reporting */}
+      <section className="py-8 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">
+            How to Report Cryptocurrency on Your Tax Return
+          </h2>
+          <div className="prose prose-lg max-w-none text-gray-700 mb-8">
+            <p className="mb-4">
+              Reporting cryptocurrency transactions on your tax return follows the same general framework as traditional capital gains reporting, but with some specific considerations unique to digital assets. The IRS has made cryptocurrency tax compliance a priority enforcement area, and failure to report crypto transactions can result in significant penalties. Since 2019, the IRS has included a specific question on the front page of Form 1040 asking whether you received, sold, exchanged, or otherwise disposed of any financial interest in any virtual currency during the tax year.
+            </p>
+          </div>
+          <div className="grid gap-4">
+            <Card>
+              <CardContent className="pt-6">
+                <h3 className="font-semibold text-lg text-emerald-800 mb-3">Forms Required for Crypto Tax Reporting</h3>
+                <p className="text-gray-700 text-sm mb-3">
+                  Cryptocurrency capital gains and losses are reported on IRS Form 8949 (Sales and Other Dispositions of Capital Assets) and then summarized on Schedule D of Form 1040. Each taxable crypto transaction must be listed separately on Form 8949 with the following information: date acquired, date sold, proceeds (fair market value at time of sale), cost basis, and the resulting gain or loss. For active traders with hundreds of transactions, crypto tax software such as CoinTracker, Koinly, or CoinLedger can automatically generate Form 8949 from your exchange transaction history.
+                </p>
+                <p className="text-gray-700 text-sm">
+                  Income from mining, staking, airdrops, and payments received in cryptocurrency is reported on Schedule 1 as other income. If your mining activity constitutes a trade or business, you may also need to file Schedule C and pay self-employment tax on your net earnings. Form 1099-DA (Digital Asset Proceeds From Broker Transactions) is a new form that certain brokers and exchanges may use starting in 2025 to report your crypto transaction details directly to both you and the IRS.
+                </p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="pt-6">
+                <h3 className="font-semibold text-lg text-emerald-800 mb-3">Cost Basis Methods for Cryptocurrency</h3>
+                <p className="text-gray-700 text-sm mb-3">
+                  Choosing the right cost basis method is crucial for minimizing your crypto tax liability. The IRS allows several methods for determining which units of cryptocurrency are considered sold when you dispose of a portion of your holdings. FIFO (First-In, First-Out) sells the oldest coins first, which often results in lower gains because cryptocurrency prices have generally trended upward over time. Specific identification allows you to select exactly which lots to sell, giving you maximum control over your tax outcome.
+                </p>
+                <p className="text-gray-700 text-sm">
+                  LIFO (Last-In, First-Out) sells the most recently purchased coins first, which may result in higher gains if prices have risen. The average cost method divides the total cost of all units by the total number of units held. For tax purposes, the IRS generally prefers specific identification when adequately documented, and defaults to FIFO if you cannot specifically identify which units were sold. Using specific identification requires you to maintain detailed records showing the acquisition date, cost, and quantity of each lot you purchase.
+                </p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="pt-6">
+                <h3 className="font-semibold text-lg text-emerald-800 mb-3">Crypto Tax Software and Tools</h3>
+                <p className="text-gray-700 text-sm mb-3">
+                  Given the complexity of cryptocurrency tax reporting, most active crypto users benefit significantly from using dedicated tax software. Popular options include CoinTracker, Koinly, CoinLedger (formerly CryptoTrader.Tax), ZenLedger, and TaxBit. These tools connect directly to your exchange accounts via API or allow you to import CSV transaction histories, then automatically calculate capital gains and losses for every transaction using your preferred cost basis method.
+                </p>
+                <p className="text-gray-700 text-sm">
+                  These platforms typically support integration with major exchanges including Coinbase, Binance, Kraken, Gemini, and many decentralized exchanges. They can handle complex scenarios such as DeFi transactions, staking rewards, NFT sales, and cross-chain transfers. Most crypto tax software generates IRS-ready reports including Form 8949, Schedule D, and income reports that can be directly imported into popular tax filing software like TurboTax, H&R Block, or TaxAct.
+                </p>
               </CardContent>
             </Card>
           </div>
@@ -287,40 +394,69 @@ export default function CryptoCapitalGainsPage() {
       </section>
 
       {/* Tax Strategies */}
-      <section className="py-8 px-4 bg-white">
+      <section className="py-8 px-4 bg-slate-50">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">
             Strategies to Reduce Cryptocurrency Capital Gains Tax
           </h2>
+          <div className="prose prose-lg max-w-none text-gray-700 mb-8">
+            <p className="mb-4">
+              While cryptocurrency taxes are unavoidable, there are several legitimate strategies that crypto investors can employ to minimize their overall tax burden. These strategies range from simple timing decisions to more complex portfolio management techniques. The key principle is to be proactive about tax planning rather than waiting until tax season to address your crypto tax obligations.
+            </p>
+          </div>
           <div className="grid gap-4">
             <Card>
               <CardContent className="pt-6">
-                <h3 className="font-semibold text-emerald-800 mb-2">1. Hold for More Than One Year</h3>
-                <p className="text-gray-700 text-sm">The simplest strategy to cut your crypto tax bill in half. Long-term capital gains rates (0%, 15%, 20%) are significantly lower than short-term ordinary rates (up to 37%). Before selling, check the exact purchase date on your exchange and consider waiting until you cross the one-year threshold.</p>
+                <h3 className="font-semibold text-emerald-800 mb-3">1. Hold for More Than One Year</h3>
+                <p className="text-gray-700 text-sm mb-3">
+                  The simplest and most impactful strategy to cut your crypto tax bill significantly. Long-term capital gains rates (0%, 15%, 20%) are dramatically lower than short-term ordinary income rates (up to 37%). Before selling, check the exact purchase date on your exchange and consider waiting until you cross the one-year threshold. Even a few extra days of holding can make the difference between paying 37% and 15% on a substantial gain.
+                </p>
+                <p className="text-gray-700 text-sm">
+                  For example, if you bought Ethereum at $2,000 and it is now worth $10,000, your gain is $8,000. Selling before one year at a 32% marginal rate would cost $2,560 in taxes. Holding past the one-year mark and paying 15% long-term rate would cost only $1,200, a saving of $1,360 on a single transaction. Multiplied across an entire portfolio, this strategy can save thousands of dollars per year.
+                </p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="pt-6">
-                <h3 className="font-semibold text-emerald-800 mb-2">2. Harvest Crypto Losses Aggressively</h3>
-                <p className="text-gray-700 text-sm">The wash sale rule may not currently apply to cryptocurrency, giving crypto investors an advantage over stock investors. You can sell losing crypto positions to offset gains from winners and immediately repurchase the same asset if desired. This strategy can significantly reduce your net taxable gains.</p>
+                <h3 className="font-semibold text-emerald-800 mb-3">2. Harvest Crypto Losses Aggressively</h3>
+                <p className="text-gray-700 text-sm mb-3">
+                  The wash sale rule may not currently apply to cryptocurrency, giving crypto investors a significant advantage over stock investors. Under Section 1091 of the Internal Revenue Code, the wash sale rule prevents investors from claiming a tax loss on a security if they repurchase a substantially identical security within 30 days before or after the sale. However, this rule has not been explicitly extended to digital assets by the IRS, although proposed legislation could change this in the future.
+                </p>
+                <p className="text-gray-700 text-sm">
+                  This means that unlike stock investors, crypto investors can sell losing positions to realize a tax loss and immediately repurchase the same cryptocurrency without violating wash sale rules. This allows for aggressive tax-loss harvesting: sell your losing tokens, claim the loss against gains, and buy back immediately to maintain your position. Excess losses beyond your gains can offset up to $3,000 of ordinary income per year, with any remaining losses carried forward indefinitely.
+                </p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="pt-6">
-                <h3 className="font-semibold text-emerald-800 mb-2">3. Use Specific Identification Accounting</h3>
-                <p className="text-gray-700 text-sm">When you sell a portion of a larger cryptocurrency holding, you can choose which specific units (lots) are being sold. Choosing the lots with the highest cost basis (which produce the smallest gain or largest loss) can minimize your tax liability. Many exchanges now support specific identification, but you may need to track lots manually.</p>
+                <h3 className="font-semibold text-emerald-800 mb-3">3. Use Specific Identification Accounting</h3>
+                <p className="text-gray-700 text-sm">
+                  When you sell a portion of a larger cryptocurrency holding, you can choose which specific units (lots) are being sold. Choosing the lots with the highest cost basis (which produce the smallest gain or largest loss) can minimize your tax liability. For example, if you bought Bitcoin at $20,000, $40,000, and $60,000, and you sell one Bitcoin at $70,000, selecting the $60,000 lot produces only $10,000 of gain, compared to $50,000 if you selected the $20,000 lot. Many exchanges now support specific identification, but you may need to track lots manually and inform your exchange of your selection at the time of sale.
+                </p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="pt-6">
-                <h3 className="font-semibold text-emerald-800 mb-2">4. Donate Appreciated Crypto to Charity</h3>
-                <p className="text-gray-700 text-sm">Donating cryptocurrency that has appreciated in value allows you to avoid capital gains tax entirely while claiming a charitable deduction for the fair market value. This is more tax-efficient than selling the crypto, paying capital gains tax, and donating the remaining cash.</p>
+                <h3 className="font-semibold text-emerald-800 mb-3">4. Donate Appreciated Crypto to Charity</h3>
+                <p className="text-gray-700 text-sm">
+                  Donating cryptocurrency that has appreciated in value to a qualified charitable organization allows you to avoid capital gains tax entirely while claiming a charitable deduction for the fair market value of the donated crypto. If you donate through a donor-advised fund (DAF), you can take the tax deduction immediately and distribute the funds to charities over time. This is significantly more tax-efficient than selling the crypto, paying capital gains tax on the gain, and donating the remaining cash. Organizations like Fidelity Charitable, the Giving Block, and many other DAFs accept cryptocurrency donations directly.
+                </p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="pt-6">
-                <h3 className="font-semibold text-emerald-800 mb-2">5. Use a Self-Directed IRA or 401(k)</h3>
-                <p className="text-gray-700 text-sm">Holding cryptocurrency inside a self-directed retirement account shields all gains from current taxation. Trades within the account are not taxable events. Roth accounts offer tax-free withdrawals in retirement, while traditional accounts defer taxes until distribution.</p>
+                <h3 className="font-semibold text-emerald-800 mb-3">5. Use a Self-Directed IRA or 401(k)</h3>
+                <p className="text-gray-700 text-sm">
+                  Holding cryptocurrency inside a self-directed individual retirement account (IRA) or 401(k) shields all gains from current taxation. All trades, staking rewards, and other transactions within the account are not taxable events. Roth accounts offer completely tax-free withdrawals in retirement, while traditional accounts defer taxes until you begin taking distributions. Platforms like Bitcoin IRA, iTrustCapital, and Alto CryptoIRA facilitate cryptocurrency investments within retirement accounts. However, there are strict rules about prohibited transactions and the assets you can hold, so it is important to work with a qualified custodian who specializes in digital asset retirement accounts.
+                </p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="pt-6">
+                <h3 className="font-semibold text-emerald-800 mb-3">6. Relocate to a Crypto-Friendly State</h3>
+                <p className="text-gray-700 text-sm">
+                  While federal capital gains tax applies regardless of where you live, state-level taxes on cryptocurrency gains vary dramatically. States like California tax cryptocurrency gains at the same rate as ordinary income, with rates as high as 13.3%. In contrast, states with no income tax, including Florida, Texas, Wyoming, Nevada, Alaska, South Dakota, New Hampshire, Tennessee, and Washington, impose zero state tax on cryptocurrency capital gains. For high-volume crypto traders or those with substantial gains, relocating to a no-income-tax state could save tens of thousands of dollars annually in state taxes alone.
+                </p>
               </CardContent>
             </Card>
           </div>

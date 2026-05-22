@@ -99,6 +99,57 @@ const faqs = [
 export default function HowToCalculateCapitalGainsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                "name": "What is the formula for calculating capital gains tax?",
+                "acceptedAnswer": { "@type": "Answer", text: "The formula is: Capital Gain = Net Sale Proceeds - Adjusted Cost Basis. Then multiply by the applicable tax rate. Short-term gains use ordinary income rates (10% to 37%); long-term gains use preferential rates (0%, 15%, or 20%). The rate depends on your holding period and total taxable income." }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I determine my cost basis for inherited property?",
+                "acceptedAnswer": { "@type": "Answer", text: "Inherited property receives a stepped-up cost basis equal to the fair market value on the date of the deceased owner's death. For example, if a parent bought stock for $10,000 and it was worth $50,000 at death, your basis is $50,000. This can eliminate years of accumulated appreciation from taxation." }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the difference between realized and unrealized capital gains?",
+                "acceptedAnswer": { "@type": "Answer", text: "A realized gain occurs when you actually sell an asset for a profit and is taxable. An unrealized (paper) gain is the increase in value of an asset you still own and is not taxable. The tax is only triggered when you sell and realize the gain." }
+              },
+              {
+                "@type": "Question",
+                "name": "What IRS forms do I need to report capital gains?",
+                "acceptedAnswer": { "@type": "Answer", text: "You need Form 8949 to report each individual transaction and Schedule D to summarize your total net gain or loss. Your broker provides Form 1099-B with transaction details. The net figure from Schedule D transfers to your Form 1040." }
+              },
+              {
+                "@type": "Question",
+                "name": "Can capital losses offset ordinary income?",
+                "acceptedAnswer": { "@type": "Answer", text: "Capital losses offset capital gains dollar-for-dollar. If losses exceed gains, up to $3,000 ($1,500 if married filing separately) can be deducted against ordinary income per year. Unused losses carry forward indefinitely until fully utilized." }
+              }
+            ]
+          })
+        }}
+      />
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://taxgainscalc.com" },
+              { "@type": "ListItem", position: 2, name: "How to Calculate Capital Gains Tax", item: "https://taxgainscalc.com/how-to-calculate-capital-gains-tax" }
+            ]
+          })
+        }}
+      />
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 py-4">
