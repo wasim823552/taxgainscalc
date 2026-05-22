@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
   reactStrictMode: false,
+  turbopack: {
+    root: "/home/z/my-project/taxgains-site",
+  },
 };
 
 export default nextConfig;

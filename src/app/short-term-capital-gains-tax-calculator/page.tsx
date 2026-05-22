@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import SiteLayout from '@/components/SiteLayout';
+import RelatedCalculators from '@/components/RelatedCalculators';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -64,6 +65,33 @@ export default function ShortTermCapitalGainsCalculatorPage() {
 
   return (
     <SiteLayout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map(faq => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+            })),
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://taxgainscalc.com' },
+              { '@type': 'ListItem', position: 2, name: 'Short-Term Capital Gains Tax Calculator', item: 'https://taxgainscalc.com/short-term-capital-gains-tax-calculator' },
+            ],
+          }),
+        }}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 text-center">
@@ -451,6 +479,100 @@ export default function ShortTermCapitalGainsCalculatorPage() {
           </div>
         </div>
       </section>
+
+      {/* 2026 Projected Brackets */}
+      <section className="py-8 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 text-center">
+            Short-Term Capital Gains Tax Brackets 2026 (Projected)
+          </h2>
+          <p className="text-center text-gray-600 mb-8 max-w-3xl mx-auto">
+            The 2026 brackets below are projected based on IRS inflation-adjustment trends. Final official numbers will be released by the IRS in late 2025.
+          </p>
+          <Card>
+            <CardHeader className="bg-red-600 text-white rounded-t-xl">
+              <CardTitle className="text-xl flex items-center gap-2">
+                <Clock className="h-5 w-5" />
+                2026 Projected Ordinary Income Tax Rates (Short-Term Gains)
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="p-0">
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th className="px-4 py-3 text-left font-semibold text-gray-900">Tax Rate</th>
+                      <th className="px-4 py-3 text-left font-semibold text-gray-900">Single</th>
+                      <th className="px-4 py-3 text-left font-semibold text-gray-900">Married Filing Jointly</th>
+                      <th className="px-4 py-3 text-left font-semibold text-gray-900">Married Filing Separately</th>
+                      <th className="px-4 py-3 text-left font-semibold text-gray-900">Head of Household</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b"><td className="px-4 py-3 font-bold text-green-600 text-lg">10%</td><td className="px-4 py-3">Up to $12,200</td><td className="px-4 py-3">Up to $24,400</td><td className="px-4 py-3">Up to $12,200</td><td className="px-4 py-3">Up to $17,400</td></tr>
+                    <tr className="border-b bg-gray-50"><td className="px-4 py-3 font-bold text-green-600 text-lg">12%</td><td className="px-4 py-3">$12,201 – $49,500</td><td className="px-4 py-3">$24,401 – $99,000</td><td className="px-4 py-3">$12,201 – $49,500</td><td className="px-4 py-3">$17,401 – $66,500</td></tr>
+                    <tr className="border-b"><td className="px-4 py-3 font-bold text-amber-600 text-lg">22%</td><td className="px-4 py-3">$49,501 – $105,450</td><td className="px-4 py-3">$99,001 – $210,900</td><td className="px-4 py-3">$49,501 – $105,450</td><td className="px-4 py-3">$66,501 – $105,450</td></tr>
+                    <tr className="border-b bg-gray-50"><td className="px-4 py-3 font-bold text-amber-600 text-lg">24%</td><td className="px-4 py-3">$105,451 – $201,050</td><td className="px-4 py-3">$210,901 – $402,100</td><td className="px-4 py-3">$105,451 – $201,050</td><td className="px-4 py-3">$105,451 – $201,050</td></tr>
+                    <tr className="border-b"><td className="px-4 py-3 font-bold text-orange-600 text-lg">32%</td><td className="px-4 py-3">$201,051 – $255,550</td><td className="px-4 py-3">$402,101 – $511,150</td><td className="px-4 py-3">$201,051 – $255,550</td><td className="px-4 py-3">$201,051 – $255,500</td></tr>
+                    <tr className="border-b bg-gray-50"><td className="px-4 py-3 font-bold text-red-600 text-lg">35%</td><td className="px-4 py-3">$255,551 – $638,900</td><td className="px-4 py-3">$511,151 – $767,800</td><td className="px-4 py-3">$255,551 – $383,900</td><td className="px-4 py-3">$255,551 – $638,900</td></tr>
+                    <tr><td className="px-4 py-3 font-bold text-red-700 text-lg">37%</td><td className="px-4 py-3">Over $638,900</td><td className="px-4 py-3">Over $767,800</td><td className="px-4 py-3">Over $383,900</td><td className="px-4 py-3">Over $638,900</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </CardContent>
+          </Card>
+          <div className="mt-6 prose prose-lg max-w-none text-gray-700">
+            <p>The IRS adjusts these brackets annually for inflation, meaning the thresholds increase slightly each year. While the seven tax rates (10%, 12%, 22%, 24%, 32%, 35%, 37%) are set by legislation and do not change with inflation, the income thresholds that determine which bracket you fall into shift upward. This bracket creep means that over time, more of your income may be taxed at lower rates even if your real income remains constant.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Complete Examples */}
+      <section className="py-8 px-4 bg-slate-50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">
+            How Short-Term Gains Are Taxed: Complete Examples
+          </h2>
+          <p className="text-center text-gray-600 mb-8 max-w-3xl mx-auto">
+            The following three examples demonstrate how short-term capital gains tax is calculated for different income levels and filing statuses.
+          </p>
+          <div className="space-y-6">
+            <Card>
+              <CardHeader><CardTitle className="text-lg text-emerald-800">Example 1: Mid-Income Salaried Worker with Stock Bonus</CardTitle></CardHeader>
+              <CardContent className="text-gray-700 text-sm">
+                <p className="mb-2"><strong>Profile:</strong> Single filer, $70,000 annual salary, exercised stock options with a $25,000 short-term gain after 10 months.</p>
+                <p className="mb-2"><strong>Ordinary income:</strong> $70,000 (after standard deduction of $15,700, taxable income is approximately $54,300)</p>
+                <p className="mb-2"><strong>Total with gain:</strong> $79,300 taxable income (pushes into 22% bracket partially)</p>
+                <p className="mb-2"><strong>Calculation:</strong> First $11,925 at 10% = $1,193; $11,926-$48,475 at 12% = $4,386; remaining $19,825 at 22% = $4,362. Tax on gain portion: approximately $4,362 (marginal 22%) + portion of lower brackets.</p>
+                <p><strong>Estimated total federal tax on gain:</strong> ~$4,400 (effective rate of ~18%)</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader><CardTitle className="text-lg text-emerald-800">Example 2: High-Income Earner with Large Short-Term Gain</CardTitle></CardHeader>
+              <CardContent className="text-gray-700 text-sm">
+                <p className="mb-2"><strong>Profile:</strong> Married filing jointly, $350,000 combined salary, sold rental property after 8 months with $100,000 short-term gain.</p>
+                <p className="mb-2"><strong>Ordinary income:</strong> $350,000 (after standard deduction of $31,200, taxable income is ~$318,800)</p>
+                <p className="mb-2"><strong>Total with gain:</strong> $418,800 (pushes significantly into 32% and 35% brackets)</p>
+                <p className="mb-2"><strong>Calculation:</strong> Using marginal rates: first portion at 22%, middle at 24%, then 32% on the gain. The $100,000 gain spans multiple brackets. Estimated marginal rate on gain: approximately 32%.</p>
+                <p className="mb-2"><strong>Tax on gain:</strong> ~$32,000 at 32% marginal rate. Plus 3.8% NIIT on amount exceeding $250,000 threshold: $168,800 x 3.8% = ~$6,414.</p>
+                <p><strong>Estimated total on gain:</strong> ~$38,414 (effective rate of ~38.4%)</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader><CardTitle className="text-lg text-emerald-800">Example 3: Retiree with Low Income and Small Gain</CardTitle></CardHeader>
+              <CardContent className="text-gray-700 text-sm">
+                <p className="mb-2"><strong>Profile:</strong> Single filer, $25,000 Social Security (partially taxable = ~$2,500), $15,000 short-term gain on stock held 11 months.</p>
+                <p className="mb-2"><strong>Ordinary income:</strong> $2,500 (taxable Social Security)</p>
+                <p className="mb-2"><strong>Total with gain:</strong> $17,500 (entirely within 12% bracket)</p>
+                <p className="mb-2"><strong>Calculation:</strong> First $11,925 at 10% = $1,193; remaining $5,575 at 12% = $669.</p>
+                <p><strong>Estimated total federal tax on gain:</strong> ~$1,862 (effective rate of ~12.4%)</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <RelatedCalculators />
 
       {/* CTA */}
       <section className="py-12 px-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white">

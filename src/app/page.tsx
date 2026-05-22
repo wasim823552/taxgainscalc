@@ -23,11 +23,14 @@ import {
   CheckCircle,
   ChevronDown,
   Mail,
-  ExternalLink
+  ExternalLink,
+  Menu,
+  X
 } from 'lucide-react';
 
 export default function Home() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const faqs = [
     {
@@ -97,13 +100,38 @@ export default function Home() {
                   <p className="text-xs text-gray-500">Capital Gains Tax Calculator</p>
                 </div>
               </div>
-              <nav className="hidden md:flex items-center gap-4">
-                <a href="#calculator" className="text-sm text-gray-600 hover:text-emerald-600 transition">Calculator</a>
-                <Link href="/capital-gains-tax-rates" className="text-sm text-gray-600 hover:text-emerald-600 transition">Tax Rates</Link>
-                <Link href="/how-to-calculate-capital-gains-tax" className="text-sm text-gray-600 hover:text-emerald-600 transition">Guide</Link>
-                <a href="#faq" className="text-sm text-gray-600 hover:text-emerald-600 transition">FAQ</a>
+              <nav className="hidden lg:flex items-center gap-3 text-sm">
+                <a href="#calculator" className="text-sm text-gray-600 hover:text-emerald-600 transition px-2.5 py-2 rounded-md hover:bg-emerald-50">Calculator</a>
+                <Link href="/capital-gains-tax-rates" className="text-sm text-gray-600 hover:text-emerald-600 transition px-2.5 py-2 rounded-md hover:bg-emerald-50">Tax Rates</Link>
+                <Link href="/long-term-capital-gains-tax-calculator" className="text-sm text-gray-600 hover:text-emerald-600 transition px-2.5 py-2 rounded-md hover:bg-emerald-50">Long-Term</Link>
+                <Link href="/short-term-capital-gains-tax-calculator" className="text-sm text-gray-600 hover:text-emerald-600 transition px-2.5 py-2 rounded-md hover:bg-emerald-50">Short-Term</Link>
+                <Link href="/stock-capital-gains-tax-calculator" className="text-sm text-gray-600 hover:text-emerald-600 transition px-2.5 py-2 rounded-md hover:bg-emerald-50">Stocks</Link>
+                <Link href="/real-estate-capital-gains-tax-calculator" className="text-sm text-gray-600 hover:text-emerald-600 transition px-2.5 py-2 rounded-md hover:bg-emerald-50">Real Estate</Link>
+                <Link href="/home-sale-capital-gains-tax-calculator" className="text-sm text-gray-600 hover:text-emerald-600 transition px-2.5 py-2 rounded-md hover:bg-emerald-50">Home Sale</Link>
+                <Link href="/day-trading-tax-calculator" className="text-sm text-gray-600 hover:text-emerald-600 transition px-2.5 py-2 rounded-md hover:bg-emerald-50">Day Trading</Link>
+                <Link href="/capital-gains-tax-by-state" className="text-sm text-gray-600 hover:text-emerald-600 transition px-2.5 py-2 rounded-md hover:bg-emerald-50">By State</Link>
+                <Link href="/how-to-calculate-capital-gains-tax" className="text-sm text-gray-600 hover:text-emerald-600 transition px-2.5 py-2 rounded-md hover:bg-emerald-50">Guide</Link>
               </nav>
+              <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="lg:hidden p-2 rounded-md text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 transition" aria-label="Toggle menu">
+                {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </button>
             </div>
+            {mobileMenuOpen && (
+              <nav className="lg:hidden mt-3 pb-3 border-t border-gray-100 pt-3">
+                <div className="grid grid-cols-2 gap-1">
+                  <a href="#calculator" onClick={() => setMobileMenuOpen(false)} className="text-sm text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 transition px-3 py-2.5 rounded-md">Calculator</a>
+                  <Link href="/capital-gains-tax-rates" onClick={() => setMobileMenuOpen(false)} className="text-sm text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 transition px-3 py-2.5 rounded-md">Tax Rates</Link>
+                  <Link href="/long-term-capital-gains-tax-calculator" onClick={() => setMobileMenuOpen(false)} className="text-sm text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 transition px-3 py-2.5 rounded-md">Long-Term</Link>
+                  <Link href="/short-term-capital-gains-tax-calculator" onClick={() => setMobileMenuOpen(false)} className="text-sm text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 transition px-3 py-2.5 rounded-md">Short-Term</Link>
+                  <Link href="/stock-capital-gains-tax-calculator" onClick={() => setMobileMenuOpen(false)} className="text-sm text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 transition px-3 py-2.5 rounded-md">Stocks</Link>
+                  <Link href="/real-estate-capital-gains-tax-calculator" onClick={() => setMobileMenuOpen(false)} className="text-sm text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 transition px-3 py-2.5 rounded-md">Real Estate</Link>
+                  <Link href="/home-sale-capital-gains-tax-calculator" onClick={() => setMobileMenuOpen(false)} className="text-sm text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 transition px-3 py-2.5 rounded-md">Home Sale</Link>
+                  <Link href="/day-trading-tax-calculator" onClick={() => setMobileMenuOpen(false)} className="text-sm text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 transition px-3 py-2.5 rounded-md">Day Trading</Link>
+                  <Link href="/capital-gains-tax-by-state" onClick={() => setMobileMenuOpen(false)} className="text-sm text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 transition px-3 py-2.5 rounded-md">By State</Link>
+                  <Link href="/how-to-calculate-capital-gains-tax" onClick={() => setMobileMenuOpen(false)} className="text-sm text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 transition px-3 py-2.5 rounded-md">Guide</Link>
+                </div>
+              </nav>
+            )}
           </div>
         </header>
 
@@ -775,20 +803,20 @@ export default function Home() {
                 <h4 className="font-semibold text-white mb-4">Calculators</h4>
                 <ul className="space-y-2 text-sm">
                   <li><a href="#calculator" className="hover:text-emerald-400 transition">Tax Calculator</a></li>
-                  <li><Link href="/long-term-capital-gains-tax-calculator" className="hover:text-emerald-400 transition">Long-Term Calculator</a></li>
-                  <li><Link href="/short-term-capital-gains-tax-calculator" className="hover:text-emerald-400 transition">Short-Term Calculator</a></li>
-                  <li><Link href="/real-estate-capital-gains-tax-calculator" className="hover:text-emerald-400 transition">Real Estate Calculator</a></li>
-                  <li><Link href="/stock-capital-gains-tax-calculator" className="hover:text-emerald-400 transition">Stock Calculator</a></li>
-                  <li><Link href="/day-trading-tax-calculator" className="hover:text-emerald-400 transition">Day Trading Calculator</a></li>
+                  <li><Link href="/long-term-capital-gains-tax-calculator" className="hover:text-emerald-400 transition">Long-Term Calculator</Link></li>
+                  <li><Link href="/short-term-capital-gains-tax-calculator" className="hover:text-emerald-400 transition">Short-Term Calculator</Link></li>
+                  <li><Link href="/real-estate-capital-gains-tax-calculator" className="hover:text-emerald-400 transition">Real Estate Calculator</Link></li>
+                  <li><Link href="/stock-capital-gains-tax-calculator" className="hover:text-emerald-400 transition">Stock Calculator</Link></li>
+                  <li><Link href="/day-trading-tax-calculator" className="hover:text-emerald-400 transition">Day Trading Calculator</Link></li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-semibold text-white mb-4">Guides</h4>
                 <ul className="space-y-2 text-sm">
-                  <li><Link href="/capital-gains-tax-rates" className="hover:text-emerald-400 transition">Tax Rates 2025-2026</a></li>
-                  <li><Link href="/how-to-calculate-capital-gains-tax" className="hover:text-emerald-400 transition">How to Calculate</a></li>
-                  <li><Link href="/capital-gains-tax-by-state" className="hover:text-emerald-400 transition">Tax by State</a></li>
-                  <li><Link href="/home-sale-capital-gains-tax-calculator" className="hover:text-emerald-400 transition">Home Sale Tax</a></li>
+                  <li><Link href="/capital-gains-tax-rates" className="hover:text-emerald-400 transition">Tax Rates 2025-2026</Link></li>
+                  <li><Link href="/how-to-calculate-capital-gains-tax" className="hover:text-emerald-400 transition">How to Calculate</Link></li>
+                  <li><Link href="/capital-gains-tax-by-state" className="hover:text-emerald-400 transition">Tax by State</Link></li>
+                  <li><Link href="/home-sale-capital-gains-tax-calculator" className="hover:text-emerald-400 transition">Home Sale Tax</Link></li>
                 </ul>
               </div>
               <div>
